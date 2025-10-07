@@ -1,70 +1,199 @@
 /* VARIABLES */
 :root {
-    --primary-color: #508D4E;
-    --secondary-color: #3E5F44;
+    --primary-color: #5465B8;
+    --secondary-color: #50589C;
+    --text-header-color: #FFCC00;
     --white-color: #D6EFD8;
     --dark-color: #484848;
     --text-color: #E8FFD7;
+
+    --shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    --shadow-1: 2px 5px 10px rgba(0, 0, 0, 0.50);
 
     --semi-bold-text: 600;
     --bold-text: 700;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-}
-
 /* NAVBAR */
-body,
-ul,
-li,
-a {
-    list-style: none;
-    text-decoration: none;
-    box-sizing: border-box;
+body {
+    padding: 0;
+    margin: 0;
+    color: black;
+    background-color: var(--secondary-color);
+    /* height: 100vh; */
+    font-family: inter;
 }
 
 header {
-    background-color: var(--white-color);
-    color: #fff;
-    padding: 15px 20px;
+    background-color: var(--secondary-color);
 }
 
 nav {
+    background-color: white;
+}
+
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
-.logo a {
-    margin-left: 30px;
-    font-size: 24px;
-    font-weight: var(--bold-text);
-    color: var(--primary-color);
-}
-
-.nav-links {
+.nav__menu {
+    margin-right: 125px;
     display: flex;
-    margin-right: 30px;
-    gap: 20px;
+    color: white;
+    gap: 10px;
+    text-decoration: none;
+    list-style: none;
+    font-weight: bold;
 }
 
-.nav-links li a {
-    color: var(--dark-color);
-    font-size: 16px;
-    font-weight: var(--semi-bold-text);
-}
-
-.nav-links li a:hover {
+.nav__logo {
+    margin-left: 125px;
     color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
 }
 
-.nav-links li a.active-btn {
-    color: var(--white-color);
-    background-color: var(--primary-color);
-    padding: 5px 10px;
+.menu-link {
+    padding: 10px;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.hero {
+    display: flex;
+    height: 625px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome {
+    position: absolute;
+    margin-top: -125px;
+    color: white;
+    text-shadow: 2px 2px 10px black;
+    font-size: 24px;
+    font-weight: bold;
+    /* background-color: red; */
+}
+
+.title {
+    font-weight: bolder;
+    color: var(--text-header-color);
+    font-size: 100px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.tagline {
+    color: white;
+    margin-top: -50px;
+    width: 50%;
+    text-align: center;
 }
 
 /* MAIN SECTION */
+.section {
+    /* background-color: red; */
+    /* margin: 0px 125px; */
+    padding: 10px 25px;
+}
+
+.section__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 75px;
+    color: var(--text-header-color);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    margin: -50px 100px 100px 100px;
+    box-shadow: var(--shadow-1);
+}
+
+.container__description {
+    text-align: center;
+    margin-right: 25px;
+    font-size: 24px;
+    /* background-color: red; */
+    margin-left: 25px;
+}
+
+.show__article {
+    padding: 20px 25px;
+    color: white;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    border: 1px solid black;
+    font-size: 24px;
+    box-shadow: var(--shadow);
+    font-weight: bold;
+}
+
+.show__article:hover {
+    cursor: pointer;
+}
+
+.container__image {
+    padding: 150px;
+    border-radius: 25px;
+    background-color: red;
+}
+
+.section__description {
+    text-align: center;
+}
+
+.white {
+    color: black;
+}
+
+.blue {
+    color: white;
+}
+
+/* DOGS */
+#dogs {
+    /* background-color: white; */
+}
+
+/* CATS */
+#cats {
+    background-color: var(--primary-color);
+}
+
+/* HAMSTERS */
+#hamsters {
+    background-color: white;
+}
+
+/* BIRDS */
+#birds {
+    background-color: var(--primary-color);
+}
+
+/* FISH */
+#fishes {
+    background-color: white;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+

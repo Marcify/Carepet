@@ -11,25 +11,75 @@
   <body>
 
     <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html">Carepet</a>
-            </div>
+        <nav class="nav">
+            <a href="index.html" class="nav__logo">Carepet</a>
 
-            <ul class="nav-links">
-                <li><a href="./index.html" class="active-btn">Home</a></li>
-                <li><a href="html/dog/dog.html">Dog</a></li>
-                <li><a href="html/cat/cat.html">Cat</a></li>
-                <li><a href="html/hamster/hamster.html">Hamster</a></li>
-                <li><a href="html/bird/bird.html">Bird</a></li>
-                <li><a href="html/fish/fish.html">Fish</a></li>
+            <ul class="nav__menu">
+                <li><a href="./index.html" class="menu-link">Home</a></li>
+                <li><a href="html/dog/dog.html" class="menu-link">Dog</a></li>
+                <li><a href="html/cat/cat.html" class="menu-link">Cat</a></li>
+                <li><a href="html/hamster/hamster.html" class="menu-link">Hamster</a></li>
+                <li><a href="html/bird/bird.html" class="menu-link">Bird</a></li>
+                <li><a href="html/fish/fish.html" class="menu-link">Fish</a></li>
             </ul>
         </nav>
+
+        <div class="hero">
+          <p class="welcome">Welcome to</p>
+          <h1 class="title">Carepet</h1>
+          <p class="tagline">
+            A pet care tips blog that provides practical advice and helpful tips 
+            for responsible pet care. Whether you're a new pet owner or looking 
+            to improve your pet's well-being, these insights aim to support 
+            a healthy, happy, and fulfilling life for your furry, feathered, 
+            or scaly companion.
+          </p>
+        </div>
     </header>
 
     <main>
+      <section id="dogs" class="section white">
+        <h1 class="section__header">DOG</h1>
+        <div class="container">
+          <div class="container__description">
+            <p class="section__description">
+              A dog is a fout-legged bundle of
+              unconditional love, equipped with a tail-wagging
+              radar for joy, ears tuned to every sound of your
+              snack bag, and a heart big enough to forgive
+              your worst day. Part best friend, part furry 
+              therapist, 100% loyal.
+            </p>
+            <button class="show__article">Show Articles</button>
+          </div>
 
+          <div class="container__image">
+            image here
+          </div>
+          
+        </div>
+      </section>
+
+      <section id="cats" class="section blue">
+        <h1 class="section__header">Cat</h1>
+      </section>
+
+      <section id="hamsters" class="section white">
+        <h1 class="section__header">Hamster</h1>
+      </section>
+
+      <section id="birds" class="section blue">
+        <h1 class="section__header">Bird</h1>
+      </section>
+
+      <section id="fishes" class="section white">
+        <h1 class="section__header">Fish</h1>
+      </section>
     </main>
+
+    <footer class="footer">
+      <p>&copy; 2024 Carepet. All rights reserved.</p>
+    </footer>
 
   </body>
 </html>
