@@ -10,17 +10,17 @@
 
   <body>
 
-    <header>
+    <header id="home">
         <nav class="nav">
             <a href="index.html" class="nav__logo">Carepet</a>
 
             <ul class="nav__menu">
-                <li><a href="./index.html" class="menu-link">Home</a></li>
-                <li><a href="html/dog/dog.html" class="menu-link">Dog</a></li>
-                <li><a href="html/cat/cat.html" class="menu-link">Cat</a></li>
-                <li><a href="html/hamster/hamster.html" class="menu-link">Hamster</a></li>
-                <li><a href="html/bird/bird.html" class="menu-link">Bird</a></li>
-                <li><a href="html/fish/fish.html" class="menu-link">Fish</a></li>
+                <li><a href="#home" class="menu-link">Home</a></li>
+                <li><a href="#dog" class="menu-link">Dog</a></li>
+                <li><a href="#cat" class="menu-link">Cat</a></li>
+                <li><a href="#hamster" class="menu-link">Hamster</a></li>
+                <li><a href="#bird" class="menu-link">Bird</a></li>
+                <li><a href="#fish" class="menu-link">Fish</a></li>
             </ul>
         </nav>
 
@@ -38,42 +38,199 @@
     </header>
 
     <main>
-      <section id="dogs" class="section white">
-        <h1 class="section__header">DOG</h1>
-        <div class="container">
-          <div class="container__description">
-            <p class="section__description">
-              A dog is a four-legged bundle of
-              unconditional love, equipped with a tail-wagging
-              radar for joy, ears tuned to every sound of your
-              snack bag, and a heart big enough to forgive
-              your worst day. Part best friend, part furry 
-              therapist, 100% loyal.
-            </p>
-            <button class="show__article">Show Articles</button>
+      <!-- FEATURED ARTICLES SECTION -->
+      <section id="featured__articles" class="section">
+        <h1 class="section__header">Featured Articles</h1>
+        <div class="cards">
+          <div class="card">
+            <div class="card__image">
+              <img src="images/dog/6pick.PNG" alt="Article 1" class="maincard__image" />
+            </div>
+            <div class="card__title">
+              <h1>Feeding: 6 Pickiest Dog Breeds When It Comes To Dog Food</h1>
+            </div>
+            <div class="card__button">
+              <button class="read__btn">Read Article</button>
+            </div>
           </div>
 
-          <div class="container__image">
-            image here
+          <div class="card">
+            <div class="card__image">
+              <img src="images/dog/6pick.PNG" alt="Article 1" class="maincard__image" />
+            </div>
+            <div class="card__title">
+              <h1>Health: How To Stay Healthy Around Cats</h1>
+            </div>
+            <div class="card__button">
+              <button class="read__btn">Read Article</button>
+            </div>
           </div>
-          
+
+          <div class="card">
+            <div class="card__image">
+              <img src="images/dog/6pick.PNG" alt="Article 1" class="maincard__image" />
+            </div>
+            <div class="card__title">
+              <h1>Health: How To Care For Fish: A Complete Guide</h1>
+            </div>
+            <div class="card__button">
+              <button class="read__btn">Read Article</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__image">
+              <img src="images/dog/6pick.PNG" alt="Article 1" class="maincard__image" />
+            </div>
+            <div class="card__title">
+              <h1>Training: How To Train A Bird</h1>
+            </div>
+            <div class="card__button">
+              <button class="read__btn">Read Article</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__image">
+              <img src="images/dog/6pick.PNG" alt="Article 1" class="maincard__image" />
+            </div>
+            <div class="card__title">
+              <h1>Grooming: The Essential Guide To Hamster Grooming For New Owners</h1>
+            </div>
+            <div class="card__button">
+              <button class="read__btn">Read Article</button>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="cats" class="section blue">
-        <h1 class="section__header">Cat</h1>
-      </section>
+      <!-- PETS SECTION -->
+      <section id="pets" class="section">
+        <h1 class="section__header">Pets</h1>
 
-      <section id="hamsters" class="section white">
-        <h1 class="section__header">Hamster</h1>
-      </section>
+        <!-- DOG SECTION -->
+        <section id="dog">
+          <div class="first__section__container">
+            <div class="first__container">
+              <h1 class="first__container__header">Dog</h1>
+              <p class="first__container__description">
+                A dog is a four-legged bundle of
+                unconditional love, equipped with a tail-wagging
+                radar for joy, ears tuned to every sound of your
+                snack bag, and a heart big enough to forgive
+                your worst day. Part best friend, part furry 
+                therapist, 100% loyal.
+              </p>
+              <button class="first__view__articles">View Articles</button>
+            </div>
 
-      <section id="birds" class="section blue">
-        <h1 class="section__header">Bird</h1>
-      </section>
+            <div class="first__container__image">
+              <img src="images/dog/dog-png-22667.png" alt="Dog Image" class="first__image"/>
+            </div>
 
-      <section id="fishes" class="section white">
-        <h1 class="section__header">Fish</h1>
+            <div class="first__circle">
+            </div>
+          </div>
+        </section>
+
+        <!-- CAT SECTION -->
+        <section id="cat">
+          <div class="second__section__container">
+            <div class="second__container">
+              <h1 class="second__container__header">Cat</h1>
+              <p class="second__container__description">
+                A cat is an independent companion wrapped in fur
+                equal parts mystery and charm. With the agility 
+                of a ninja, a cat brings quiet comfort, occasional chaos, 
+                and a lot of personality to any home. They may act like 
+                royalty, but they make you feel like family.
+              </p>
+              <button class="second__view__articles">View Articles</button>
+            </div>
+
+            <div class="second__container__image">
+              <img src="images/cat/cat-png-40351.png" alt="Cat Image" class="second__image"/>
+            </div>
+
+            <div class="second__circle">
+            </div>
+          </div>
+        </section>
+
+        <!-- HAMSTER SECTION -->
+        <section id="hamster">
+          <div class="first__section__container">
+            <div class="first__container">
+              <h1 class="first__container__header">Hamster</h1>
+              <p class="first__container__description">
+                A dog is a four-legged bundle of
+                unconditional love, equipped with a tail-wagging
+                radar for joy, ears tuned to every sound of your
+                snack bag, and a heart big enough to forgive
+                your worst day. Part best friend, part furry 
+                therapist, 100% loyal.
+              </p>
+              <button class="first__view__articles">View Articles</button>
+            </div>
+
+            <div class="first__container__image">
+              <img src="images/dog/dog-png-22667.png" alt="Dog Image" class="first__image"/>
+            </div>
+
+            <div class="first__circle">
+            </div>
+          </div>
+        </section>
+
+        <!-- BIRD SECTION -->
+        <section id="bird">
+          <div class="second__section__container">
+            <div class="second__container">
+              <h1 class="second__container__header">Bird</h1>
+              <p class="second__container__description">
+                A cat is an independent companion wrapped in fur
+                equal parts mystery and charm. With the agility 
+                of a ninja, a cat brings quiet comfort, occasional chaos, 
+                and a lot of personality to any home. They may act like 
+                royalty, but they make you feel like family.
+              </p>
+              <button class="second__view__articles">View Articles</button>
+            </div>
+
+            <div class="second__container__image">
+              <img src="images/cat/cat-png-40351.png" alt="Cat Image" class="second__image"/>
+            </div>
+
+            <div class="second__circle">
+            </div>
+          </div>
+        </section>
+
+        <!-- FISH SECTION -->
+        <section id="fish">
+          <div class="first__section__container">
+            <div class="first__container">
+              <h1 class="first__container__header">Fish</h1>
+              <p class="first__container__description">
+                A dog is a four-legged bundle of
+                unconditional love, equipped with a tail-wagging
+                radar for joy, ears tuned to every sound of your
+                snack bag, and a heart big enough to forgive
+                your worst day. Part best friend, part furry 
+                therapist, 100% loyal.
+              </p>
+              <button class="first__view__articles">View Articles</button>
+            </div>
+
+            <div class="first__container__image">
+              <img src="images/dog/dog-png-22667.png" alt="Dog Image" class="first__image"/>
+            </div>
+
+            <div class="first__circle">
+            </div>
+          </div>
+        </section>
+
       </section>
     </main>
 

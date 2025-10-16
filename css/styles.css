@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
 /* VARIABLES */
 :root {
     --primary-color: #5465B8;
@@ -6,6 +8,12 @@
     --white-color: #D6EFD8;
     --dark-color: #484848;
     --text-color: #E8FFD7;
+
+    --text-color1: #FFFFFF;
+    --text-color2: #000000;
+    --text-color3: #484848;
+    --text-color4: #2596BE;
+    --text-color5: #B2EBFF;
 
     --shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     --shadow-1: 2px 5px 10px rgba(0, 0, 0, 0.50);
@@ -19,9 +27,10 @@ body {
     padding: 0;
     margin: 0;
     color: black;
-    background-color: var(--secondary-color);
+    background-color: var(--text-color1);
     /* height: 100vh; */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-family: "Nerko One", cursive; */
 }
 
 header {
@@ -32,6 +41,10 @@ nav {
     background-color: white;
 }
 
+main {
+    background-color: white;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -39,72 +52,90 @@ nav {
     position: fixed;
     width: 100%;
     top: 0;
-    padding: 6px 0;
+    padding: 10px 0;
+    z-index: 10;
 }
 
 .nav__menu {
     margin-right: 125px;
     display: flex;
     color: white;
-    gap: 10px;
     text-decoration: none;
+    gap: 5px;
     list-style: none;
     font-weight: bold;
 }
 
 .nav__logo {
     margin-left: 125px;
-    color: var(--primary-color);
+    padding: 10px 35px;
+    color: var(--text-color4);
     text-decoration: none;
     font-weight: bold;
+    /* background-color: red; */
     font-size: 32px;
 }
 
 .menu-link {
-    padding: 10px;
-    color: var(--primary-color);
+    padding: 10px 35px;
+    /* background-color: red; */
+    color: var(--text-color3);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.menu-link:hover {
+    color: var(--text-color4);
     text-decoration: none;
     font-size: 20px;
 }
 
 .hero {
     display: flex;
-    height: 625px;
+    height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* position: relative; */
+    background-image: 
+        linear-gradient(rgba(37, 150, 190, 0.8), rgba(37, 150, 190, 0.8)),
+        url("../images/pets_home.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .welcome {
-    /* position: absolute; */
-    margin-top: 100px;
+    position: absolute;
+    margin-top: -350px;
     color: white;
-    text-shadow: 2px 2px 10px black;
-    font-size: 24px;
+    /* text-shadow: 2px 2px 10px black; */
+    font-size: 32px;
     font-weight: bold;
     /* background-color: red; */
 }
 
 .title {
-    margin-top: -55px;
+    margin-top: 0px;
     font-weight: bolder;
-    color: var(--text-header-color);
-    font-size: 100px;
+    color: var(--text-color5);
+    font-size: 250px;
     text-shadow: 2px 2px 2px black;
 }
 
 .tagline {
     color: white;
-    margin-top: -50px;
-    width: 50%;
+    margin-top: -150px;
+    width: 65%;
+    font-size: 32px;
     text-align: center;
 }
 
-/* MAIN SECTION */
+/* SECTION HEADER */
 .section {
-    /* background-color: red; */
+    /* background-color: black; */
     /* margin: 0px 125px; */
-    padding: 10px 25px;
+    /* padding: 10px 25px; */
 }
 
 .section__header {
@@ -112,69 +143,217 @@ nav {
     justify-content: center;
     align-items: center;
     font-weight: bolder;
-    font-size: 75px;
-    color: var(--text-header-color);
+    margin-top: 25px;
+    font-size: 100px;
+    /* background-color: red; */
+    color: var(--text-color4);
 }
 
-.container {
+/* FEATURED ARTICLES */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+    row-gap: 100px;
+    /* background-color: blue; */
+    margin: -75px 125px 0px 125px;
+    padding: 50px 0px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    border: 2px solid var(--color1);
+    /* padding: 0 10px 30px 20px; */
+    box-shadow: var(--shadow-1);
+    height: 700px;
+}
+
+.maincard__image {
+    width: 100%;
+}
+
+.card__title {
+    flex-grow: 1;
+    padding: 0px 10px 30px 20px;
+}
+
+.card__button {
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+    padding: 20px;
+}
+
+.read__btn {
+    text-wrap: nowrap;
+    padding: 25px 0px;
+    font-size: 20px;
+    width: 100%;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 15px;
+    /* background-color: red; */
+}
+
+.read__btn:hover {
+    cursor: pointer;
+    border: 1px solid var(--text-color4);
+    /* background-color: var(--text-color4); */
+    color: var(--text-color4);
+}
+
+
+
+
+/* FIRST STYLE SECTION */
+.first__section__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
-    border-radius: 25px;
-    margin: -50px 100px 100px 100px;
+    background-color: var(--text-color5);
+    margin: -50px 120px 200px 125px;
     box-shadow: var(--shadow-1);
+    padding: 50px 75px 50px 100px;
+    position: relative;
+    overflow: hidden;
 }
 
-.container__description {
-    text-align: center;
-    margin-right: 25px;
+.first__container {
+    text-align: left;
     font-size: 24px;
-    /* background-color: red; */
-    margin-left: 25px;
 }
 
-.show__article {
-    padding: 20px 25px;
+.first__container__header {
+    font-weight: bolder;
+    font-size: 64px;
+    margin: 0px;
+}
+
+.first__container__description {
+    font-size: 32px;
+    /* margin-right: 600px; */
+    margin: 10px 600px 25px 0px;
+    /* background-color: red; */
+    text-align: left;
+}
+
+.first__view__articles {
+    padding: 20px 75px;
     color: white;
-    background-color: var(--secondary-color);
-    border-radius: 15px;
+    background-color: var(--text-color2);
+    border-radius: 20px;
     border: 1px solid black;
     font-size: 24px;
     box-shadow: var(--shadow);
     font-weight: bold;
 }
 
-.show__article:hover {
+.first__view__articles:hover {
     cursor: pointer;
+    color: var(--text-color4);
 }
 
-.container__image {
-    padding: 150px;
+.first__circle {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background-color: var(--text-color4);
+    right: -80px;
+    top: 0px
+}
+
+.first__container__image {
+    position: absolute;
+    right: -80px;
+    top: -150px;
+    padding: 150px; 
     border-radius: 25px;
-    background-color: red;
+    /* background-color: red; */
+    z-index: 1;
 }
 
-.section__description {
-    text-align: center;
-}
-
-.white {
-    color: black;
-}
-
-.blue {
-    color: white;
-}
-
-/* DOGS */
-#dogs {
-    /* background-color: white; */
+.first__image {
+    width: 450px;
+    height: auto;
 }
 
 /* CATS */
-#cats {
-    background-color: var(--primary-color);
+.second__section__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--text-color5);
+    margin: -50px 125px 200px 120px;
+    box-shadow: var(--shadow-1);
+    padding: 50px 100px 50px 75px;
+    position: relative;
+    overflow: hidden;
+}
+
+.second__container {
+    /* background-color: red; */
+    text-align: left;
+    font-size: 24px;
+    margin-left: 450px;
+}
+
+.second__container__header {
+    font-weight: bolder;
+    font-size: 64px;
+    margin: 0px;
+}
+
+.second__container__description {
+    margin: 10px 0px 25px 0px;
+    font-size: 32px;
+    /* background-color: red; */
+    text-align: left;
+}
+
+.second__view__articles {
+    padding: 20px 75px;
+    color: white;
+    background-color: var(--text-color2);
+    border-radius: 20px;
+    border: 1px solid black;
+    font-size: 24px;
+    box-shadow: var(--shadow);
+    font-weight: bold;
+}
+
+.second__view__articles:hover {
+    cursor: pointer;
+    color: var(--text-color4);
+}
+
+.second__circle {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background-color: var(--text-color4);
+    left: -110px;
+    top: -65px;
+}
+
+.second__container__image {
+    position: absolute;
+    left: -175px;
+    top: -150px;
+    padding: 150px; 
+    border-radius: 25px;
+    /* background-color: red; */
+    z-index: 1;
+}
+
+.second__image {
+    transform: scaleX(-1);
+    width: 500px;
+    height: auto;
 }
 
 /* HAMSTERS */
@@ -199,4 +378,3 @@ nav {
     align-items: center;
     background-color: var(--primary-color);
 }
-
