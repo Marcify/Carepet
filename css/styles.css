@@ -171,6 +171,10 @@ main {
     height: 700px;
 }
 
+.card:hover {
+    border: 2px solid black;
+}
+
 .maincard__image {
     width: 100%;
 }
