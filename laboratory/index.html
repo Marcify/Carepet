@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aurora Café</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header: Flexbox -->
+  <header class="site-header">
+    <div class="brand">
+      <span class="logo">☕</span>
+      <h1 class="brand__name">Aurora Café</h1>
+    </div>
+
+    <nav class="main-nav">
+      <a href="#menu" class="nav-link">Menu</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#visit" class="nav-link">Visit</a>
+      <a href="#contact" class="btn nav-cta">Order Now</a>
+    </nav>
+  </header>
+
+  <!-- Hero: includes keyframe animation on tagline -->
+  <section class="hero">
+    <div class="hero__content">
+      <h2 class="hero__title">Brewed fresh. Shared warm.</h2>
+      <p class="hero__tagline">Small-batch coffee & artisan pastries—every day.</p>
+      <a href="#menu" class="btn btn--primary">Explore Menu</a>
+    </div>
+  </section>
+
+  <!-- Display demo: block vs inline vs inline-block -->
+  <section class="display-demo" aria-labelledby="display-title">
+    <h3 id="display-title">Display Demo</h3>
+    <div class="display-row">
+      <div class="box box--block">block</div>
+      <span class="box box--inline">inline</span>
+      <span class="box box--inlineblock">inline-block</span>
+    </div>
+    <p class="display-note">Observe spacing/line behavior of each display type.</p>
+  </section>
+
+  <!-- Menu Grid -->
+  <section id="menu" class="menu">
+    <h3 class="section-title">Signature Drinks</h3>
+    <div class="menu__grid">
+      <article class="card">
+        <img src="https://picsum.photos/seed/espresso/400/300" alt="Espresso" />
+        <h4>Midnight Espresso</h4>
+        <p>Bold, velvety shot with a hint of dark chocolate.</p>
+        <button class="btn btn--ghost">Add to Order</button>
+      </article>
+
+      <article class="card">
+        <img src="https://picsum.photos/seed/latte/400/300" alt="Latte" />
+        <h4>Golden Latte</h4>
+        <p>Creamy steamed milk swirling over rich espresso.</p>
+        <button class="btn btn--ghost">Add to Order</button>
+      </article>
+
+      <article class="card">
+        <img src="https://picsum.photos/seed/cappuccino/400/300" alt="Cappuccino" />
+        <h4>Silk Cappuccino</h4>
+        <p>Feather-light foam with cocoa dusting.</p>
+        <button class="btn btn--ghost">Add to Order</button>
+      </article>
+
+      <article class="card">
+        <img src="https://picsum.photos/seed/mocha/400/300" alt="Mocha" />
+        <h4>Mocha Aurora</h4>
+        <p>Espresso meets artisan dark chocolate.</p>
+        <button class="btn btn--ghost">Add to Order</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- About (with floated image) -->
+  <section id="about" class="about">
+    <h3 class="section-title">About Aurora</h3>
+    <img class="about__image" src="https://picsum.photos/seed/beans/260/260" alt="Roasted coffee beans in a bowl" />
+    <p>
+      We’re a neighborhood café focused on ethically sourced beans and slow-crafted pastries.
+      Our roasters partner directly with small farms to ensure quality and sustainability.
+      From sunrise espresso to late-afternoon cappuccino, we brew with care.
+    </p>
+    <p>
+      Sit by the window, browse our seasonal menu, or bring a friend—there’s always a warm seat
+      for good conversation and great coffee.
+    </p>
+  </section>
+
+  <!-- Visit -->
+  <section id="visit" class="visit">
+    <h3 class="section-title">Visit Us</h3>
+    <p>123 Aurora St., Brewtown • Daily 7:00–20:00</p>
+    <a href="#contact" class="btn btn--primary">Get Directions</a>
+  </section>
+
+  <!-- Footer: Flexbox -->
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Aurora Café</p>
+    <div class="social">
+      <a href="#" class="nav-link">Instagram</a>
+      <a href="#" class="nav-link">Facebook</a>
+      <a href="#" class="nav-link">X</a>
+    </div>
+  </footer>
+
+  <script>
+    // simple year filler
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

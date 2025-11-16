@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+            gap: 5px;
+        }
+
+        .grid-item {
+            display: grid;
+            background-color: aqua;
+            border: 1px solid black;
+            /* height: 100%; */
+            /* width: 100%; */
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+        }
+
+        .header {
+            grid-column: 1 / 4;
+        }
+
+        .aside {
+            grid-row: 2 / 4;
+            height: 100px;
+        }
+
+        .main {
+            grid-column: 2 / 4;
+            grid-row: 2 / 4;
+            height: 100px;
+        }
+        
+        .footer {
+            grid-column: 1 / 4;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item header">Header</div>
+        <div class="grid-item aside">Aside Nav</div>
+        <div class="grid-item main">Main</div>
+        <div class="grid-item footer">Footer</div>
+        <!-- <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+        <div class="grid-item">11</div>
+        <div class="grid-item">12</div> -->
+    </div>
+</body>
+</html>

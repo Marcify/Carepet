@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            background-color: rgb(255, 0, 0);
+        }
+
+        span {
+            display: block;
+            height: 100px;
+            width: 100px;
+            background-color: rgb(0, 0, 255);
+            border: 2px solid rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>display: block;</h1>
+    <div>
+        <span>1</span>
+        <span>2</span>
+    </div>
+
+    <br>
+
+    <h1>display: inline;</h1>
+    <div>
+        <div style="display: inline; height: 100px; width: 100px; background-color: blue; border: 2px solid black; font-size: 50px;">1</div>
+        <div style="display: inline; height: 100px; width: 100px; background-color: blue; border: 2px solid black; line-height: 100px">2</div>
+    </div>
+
+    <br>
+
+    <h1>display: inline-block;</h1>
+    <div>
+        <div style="display: inline-block; height: 100px; width: 250px; background-color: blue; border: 2px solid black;">1</div>
+        <div style="display: inline-block; height: 100px; width: 250px; background-color: blue; border: 2px solid black;">2</div>
+    </div>
+
+    <h1>display: none;</h1>
+    <div>
+        <div style="display: none; height: 100px; width: 250px; background-color: blue; border: 2px solid black;">1</div>
+        <div style="display: none; height: 100px; width: 250px; background-color: blue; border: 2px solid black;">2</div>
+    </div>
+</body>
+</html>
