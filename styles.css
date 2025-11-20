@@ -196,7 +196,7 @@ body{
 
 .card {
     display: grid;
-    grid-template-rows: 200px auto 1fr auto;
+    grid-template-rows: 200px auto auto 1fr;
     /* grid-template-rows: repeat(auto, 1fr); */
     background-color: var(--light);
     border-radius: 1rem;
