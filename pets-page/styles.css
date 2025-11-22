@@ -136,8 +136,8 @@ body{
 
 .hero__image {
     position: relative;
-    width: 300px;
-    height: 257px;
+    width: 15rem;
+    height: 15rem;
     object-fit: contain;
 }
 
