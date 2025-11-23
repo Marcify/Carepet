@@ -192,13 +192,14 @@
 
   <script>
     // Mobile menu toggle
-    document
-      .querySelector(".mobile-menu-btn")
-      .addEventListener("click", function () {
-        document.querySelector(".main-nav").classList.toggle("active");
-      });
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const mainNav = document.querySelector('.main-nav');
 
-      document.getElementById('year').textContent = new Date().getFullYear();
+    menuBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 
