@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carepet - Dog</title>
 
-    <link rel="stylesheet" href="../styles.css">
-  </head>
-  <body>
-    <!-- Header -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carepet - Bird</title>
+
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container">
       <div class="logo">
@@ -18,11 +20,11 @@
 
       <nav class="main-nav">
         <a href="../../index.html" class="nav-link">Home</a>
-        <a href="#" class="nav-link">Dog</a>
-        <a href="#" class="nav-link">Cat</a>
-        <a href="#" class="nav-link">Hamster</a>
+        <a href="../dog page/index.html" class="nav-link">Dog</a>
+        <a href="../cat page/index.html" class="nav-link">Cat</a>
+        <a href="../hamster page/index.html" class="nav-link">Hamster</a>
         <a href="#" class="nav-link">Bird</a>
-        <a href="#" class="nav-link">Fish</a>
+        <a href="../fish page/index.html" class="nav-link">Fish</a>
       </nav>
     </div>
   </header>
@@ -30,13 +32,92 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="container hero__content">
-      <img src="./images/pets_home2.png" alt="Image of pets" class="hero__image" />
-      <h2 class="hero__title">Dog</h2>
+      <img src="../../images/bird.png" alt="Image of pets" class="hero__image" />
+      <h2 class="hero__title">Bird</h2>
       <p class="hero__tagline">
-        We provide practical advice and helpful tips for responsible pet care.
+        A bird is a vibrant, feathered companion th at brings song, color, and personality into your home. Whether
+        chirping cheerfully at sunrise or mimicking your words, birds are intelligent, social, and full of life. With
+        the heart of a singer and the spirit of freedom, they make truly unique pets.
       </p>
     </div>
   </section>
+
+  <!-- Articles Grid -->
+  <section id="articles" class="featured-articles">
+    <h2 class="section-title">Articles</h2>
+    <p class="section-description">Read different articles related to Birds.</p>
+    <div class="container articles__grid">
+      <article class="card">
+        <img src="../../images/bird/article 1.avif" alt="A Bird Eating at the Camera" />
+        <h4>How To Feed A Bird Properly</h4>
+        <p>
+          Many people would complete a discussion on how to feed a bird with just one word: seeds. Perhaps some would
+          sum it up in three words: seeds with pellets.
+        </p>
+        <a href="" class="btn-read-article">Read Article</a>
+      </article>
+
+      <article class="card">
+        <img src="../../images/bird/article 2.avif" alt="A Bird in the finger" />
+        <h4>How To Train A Bird</h4>
+        <p>
+          If you're looking to adopt your first bird, you may be wondering what to know when it comes to training your
+          new pet. Are birds easy to train? What kind of bird is easiest to train? Is it even possible to train birds?
+          These are all good and important questions—read on to find out what you need to know about teaching birds.
+        </p>
+        <a href="" class="btn-read-article">Read Article</a>
+      </article>
+
+      <article class="card">
+        <img src="../../images/bird/article 3.webp" alt="A Bird looking at a veterinarian while triming it's nail" />
+        <h4>Grooming And Routine Care Of Pet Birds</h4>
+        <p>
+          Like all pets, birds need regular care and grooming. Here are a few grooming tips:
+        </p>
+        <a href="" class="btn-read-article">Read Article</a>
+      </article>
+
+      <article class="card">
+        <img src="../../images/bird/article 4.jpg" alt="A Bird on palm of a kid." />
+        <h4>Grooming and Routine Care of Pet Birds</h4>
+        <p>
+          Having a bird as part of your family can be a considerable responsibility, as they are entirely dependent on
+          their carers (you!) for food, water, shelter, and good health. A well -cared- for pet bird can live for 10 -
+          60 years, so to help make sure they're happy and fun years. Here's some tips on what they need to stay in good
+          health.
+        </p>
+        <a href="" class="btn-read-article">Read Article</a>
+      </article>
+
+      <article class="card">
+        <img src="../../images/bird/article 5.avif" alt="A child caring a bird." />
+        <h4>Bird Health Care</h4>
+        <p>
+          There are so many species to choose from - how do you know what is best for your family? Read on to learn a
+          little bit about these feathered friends, and what you need to know before adopting one.
+        </p>
+        <a href="" class="btn-read-article">Read Article</a>
+      </article>
+
+      <article class="card">
+        <img src="../../images/bird/article 6.avif" alt="A Bird standing on a wood stand." />
+        <h4>Where To Pet Your Bird</h4>
+        <p>
+          Most people know where to pet a dog or a cat, but what about a pet bird? It's a bit more complicated.
+        </p>
+        <a href="" class="btn-read-article">Read Article</a>
+      </article>
+    </div>
+  </section>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Carepet. All Rights Reserved.</p>
+      <div class="contact-us">
+        <a href="mailto:carepet@gmail.com" class="btn-contact-us">Contact Us</a>
+      </div>
+    </div>
+  </footer>
 
   <script>
     // Mobile menu toggle
@@ -46,7 +127,8 @@
         document.querySelector(".main-nav").classList.toggle("active");
       });
 
-      document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-  </body>
+</body>
+
 </html>
