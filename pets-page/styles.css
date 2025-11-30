@@ -322,6 +322,7 @@ body{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        max-width: 768px;
     }
 
     .logo {
@@ -389,6 +390,7 @@ body{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        max-width: 1200px;
     }
 
     .logo {
@@ -450,6 +452,10 @@ body{
 
 @media (min-width: 1440px) {
     .container {
+        max-width: 1440px;
+    }
+
+    .site-header .container {
         max-width: 1440px;
     }
 
