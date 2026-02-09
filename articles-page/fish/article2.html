@@ -26,13 +26,29 @@
                 <a href="../../pets-page/hamster page/index.html" class="nav-link">Hamster</a>
                 <a href="../../pets-page/bird page/index.html" class="nav-link">Bird</a>
                 <a href="../../pets-page/fish page/index.html" class="nav-link">Fish</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="moon-icon">🌙</span>
+                    <span class="sun-icon">☀️</span>
+                </button>
             </nav>
         </div>
     </header>
 
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <!-- Article Content -->
     <main class="article-main">
         <article class="container article-container">
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="../../index.html">Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../pets-page/fish page/index.html">Fish</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">How To Train Your Fish To Do Tricks</span>
+            </nav>
+
             <header class="article-header">
                 <h1 class="article-title">How To Train Your Fish To Do Tricks</h1>
                 <div class="article-meta">
@@ -286,8 +302,30 @@
         });
 
         document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Scroll Progress Indicator
+        const scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
     </script>
     <script src="../scroll-to-top.js"></script>
+    <script src="../theme-scroll.js"></script>
 </body>
 
 </html>

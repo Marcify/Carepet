@@ -26,9 +26,16 @@
         <a href="../hamster page/index.html" class="nav-link">Hamster</a>
         <a href="../bird page/index.html" class="nav-link">Bird</a>
         <a href="#" class="nav-link">Fish</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <span class="moon-icon">🌙</span>
+          <span class="sun-icon">☀️</span>
+        </button>
       </nav>
     </div>
   </header>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -47,30 +54,40 @@
   <section id="articles" class="featured-articles">
     <h2 class="section-title">Articles</h2>
     <p class="section-description">Read different articles related to Fish.</p>
+    
+    <!-- Category Filter -->
+    <div class="category-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="feeding">Feeding</button>
+      <button class="filter-btn" data-filter="grooming">Grooming</button>
+      <button class="filter-btn" data-filter="health">Health</button>
+      <button class="filter-btn" data-filter="training">Training</button>
+    </div>
+
     <div class="container articles__grid">
-      <article class="card">
-        <img src="../../images/fish/article1.avif" alt="Feeding fish" />
+      <article class="card" data-tags="feeding">
+        <img src="../../images/fish/article1.avif" alt="Feeding fish" loading="lazy" />
         <h4>What Do Fish Eat? Your Guide To Feeding Pet Fish</h4>
         <p>When caring for pet fish, diet is one of the most important aspects of your fish's health. But what do fisheat as pets, exactly?</p>
-        <a href="../../articles-page/fish/article1.html" class=" btn-read-article">Read Article</a>
+        <a href="../../articles-page/fish/article1.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/fish/article2.jpg" alt="Fish head on tip of finger" />
+      <article class="card" data-tags="training">
+        <img src="../../images/fish/article2.jpg" alt="Fish head on tip of finger" loading="lazy" />
         <h4>How To Train Your Fish To Do Tricks</h4>
         <p>Fish training is a fun, interesting activity to enrich the life of your pet fish.</p>
         <a href="../../articles-page/fish/article2.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/fish/article3.avif" alt="Cleaning aquarium" />
+      <article class="card" data-tags="grooming">
+        <img src="../../images/fish/article3.avif" alt="Cleaning aquarium" loading="lazy" />
         <h4>How To Clean A Fish Tank</h4>
         <p>Learning how to clean fish tank correctly is a major part to keeping your pet fish happy and healthy.</p>
         <a href="../../articles-page/fish/article3.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/fish/article4.jpg" alt="Man holding a fish bowl" />
+      <article class="card" data-tags="health">
+        <img src="../../images/fish/article4.jpg" alt="Man holding a fish bowl" loading="lazy" />
         <h4>How To Care for Fish: A Complete Guide</h4>
         <p>There are over 30,000 species of fish in the world, varying greatly in shape, size, and personality.</p>
         <a href="../../articles-page/fish/article4.html" class="btn-read-article">Read Article</a>
@@ -97,6 +114,48 @@
       });
 
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    // Scroll Progress Indicator
+    const scrollProgress = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      scrollProgress.style.width = scrollPercent + '%';
+    });
+
+    // Category Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const filter = btn.dataset.filter;
+        
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.tags === filter) {
+            card.style.display = 'grid';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
   </script>
 </body>
 

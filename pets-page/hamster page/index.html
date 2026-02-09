@@ -24,9 +24,16 @@
         <a href="#" class="nav-link">Hamster</a>
         <a href="../bird page/index.html" class="nav-link">Bird</a>
         <a href="../fish page/index.html" class="nav-link">Fish</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <span class="moon-icon">🌙</span>
+          <span class="sun-icon">☀️</span>
+        </button>
       </nav>
     </div>
   </header>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -43,30 +50,40 @@
   <section id="articles" class="featured-articles">
     <h2 class="section-title">Articles</h2>
     <p class="section-description">Read different articles related to Hamsters.</p>
+    
+    <!-- Category Filter -->
+    <div class="category-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="feeding">Feeding</button>
+      <button class="filter-btn" data-filter="grooming">Grooming</button>
+      <button class="filter-btn" data-filter="health">Health</button>
+      <button class="filter-btn" data-filter="training">Training</button>
+    </div>
+
     <div class="container articles__grid">
-      <article class="card">
-        <img src="../../images/hamster/food-to-avoid.jfif" alt="Foods Hamsters can't eat" />
+      <article class="card" data-tags="feeding">
+        <img src="../../images/hamster/food-to-avoid.jfif" alt="Foods Hamsters can't eat" loading="lazy" />
         <h4>How To Feed Hamsters</h4>
         <p>amsters can be cute, small, cuddly, and playful. But, to keep a hamster of your own, you will have to give some thought to feeding it properly.</p>
         <a href="../../articles-page/hamster/article1.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/hamster/exercise.jfif" alt="A Hamster running in a Hamster Wheel" />
+      <article class="card" data-tags="training">
+        <img src="../../images/hamster/exercise.jfif" alt="A Hamster running in a Hamster Wheel" loading="lazy" />
         <h4>How To Exercise a Hamster</h4>
         <p>Pet hamsters need exercising, just as you do too. Providing opportunities for adequate exercise and for promoting your hamster's curiosity is an important part of maintaining your hamster's good health.</p>
         <a href="../../articles-page/hamster/article2.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/hamster/grooming.jfif" alt="A Hamster getting his/her nail trimmed" />
+      <article class="card" data-tags="grooming">
+        <img src="../../images/hamster/grooming.jfif" alt="A Hamster getting his/her nail trimmed" loading="lazy" />
         <h4>How To Trim Hamster Nails</h4>
         <p>If your hamster's nails are overgrown so that they are folding inwards or curling sideways, they likely need to be trimmed.</p>
         <a href="../../articles-page/hamster/article3.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/hamster/caring-sick-hamster.jfif" alt="A Sick Hamster drinking medicine" />
+      <article class="card" data-tags="health">
+        <img src="../../images/hamster/caring-sick-hamster.jfif" alt="A Sick Hamster drinking medicine" loading="lazy" />
         <h4>How To Treat Your Sick Hamster</h4>
         <p>It is always sad when any pet becomes ill. Hamsters have a way of endearing themselves to their owners and they are so small, so it's worrying when they feel unwell.</p>
         <a href="../../articles-page/hamster/article4.html" class="btn-read-article">Read Article</a>
@@ -91,7 +108,49 @@
         document.querySelector(".main-nav").classList.toggle("active");
       });
 
-      document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    // Scroll Progress Indicator
+    const scrollProgress = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      scrollProgress.style.width = scrollPercent + '%';
+    });
+
+    // Category Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const filter = btn.dataset.filter;
+        
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.tags === filter) {
+            card.style.display = 'grid';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
   </script>
   </body>
 </html>

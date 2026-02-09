@@ -24,9 +24,16 @@
         <a href="../hamster page/index.html" class="nav-link">Hamster</a>
         <a href="../bird page/index.html" class="nav-link">Bird</a>
         <a href="../fish page/index.html" class="nav-link">Fish</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <span class="moon-icon">🌙</span>
+          <span class="sun-icon">☀️</span>
+        </button>
       </nav>
     </div>
   </header>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -43,8 +50,18 @@
   <section id="articles" class="featured-articles">
     <h2 class="section-title">Articles</h2>
     <p class="section-description">Read different articles related to Cats.</p>
+    
+    <!-- Category Filter -->
+    <div class="category-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="feeding">Feeding</button>
+      <button class="filter-btn" data-filter="grooming">Grooming</button>
+      <button class="filter-btn" data-filter="health">Health</button>
+      <button class="filter-btn" data-filter="training">Training</button>
+    </div>
+
     <div class="container articles__grid">
-      <article class="card">
+      <article class="card" data-tags="feeding">
         <img src="../../images/cat/eating.jpg"
         alt="A Cat Eating a Cat Food" />
         <h4>Cat Nutrition: What Makes A Nutritional Cat Food?</h4>
@@ -52,28 +69,28 @@
         <a href="../../articles-page/cat/article1.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-tags="grooming">
         <img src="../../images/cat/grooming.jpg" alt="Grooming Cat" />
         <h4>Grooming And Coat Care For Your Cat</h4>
         <p>The general condition of your cat's skin and coat are good indicators of her health.</p>
         <a href="../../articles-page/cat/article2.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-tags="training">
         <img src="../../images/cat/training.jpg" alt="Training Cat" />
         <h4>How To Stop Your Cat From Biting</h4>
         <p>Cats express their emotions through subtle body language, but most people have limited understanding of what these signals mean.</p>
         <a href="../../articles-page/cat/article3.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-tags="health">
         <img src="../../images/cat/health.jpg" alt="Cat Getting Check Up" />
         <h4>Complete Cat Health Guide For Every Life Stage</h4>
         <p>Many people consider cats to be self-sufficient, independent pets.</p>
         <a href="../../articles-page/cat/article4.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-tags="health">
         <img src="../../images/cat/additional.jpg" alt="Petting a Cat" />
         <h4>12 Telltale Signs Your Cat Is Happy</h4>
         <p>Wondering if you’ve got a happy cat? If your kitty is exhibiting these purr-fectly content behaviors, the answer is yes. </p>
@@ -81,11 +98,11 @@
       </article>
     </div>
 
-    <!-- Persian-->>
+    <!-- Persian-->
     <h2 class="section-title">Persian</h2>
     <p class="section-description">Read different articles related to Persian.</p>
     <div class="container articles__grid">
-      <article class="card">
+      <article class="card" data-tags="health">
         <img src="../../images/cat/persian health.jpg"
         alt="Persian Getting Check Up" />
         <h4>Persian Cat Health Issues</h4>
@@ -93,21 +110,21 @@
         <a href="../../articles-page/cat/article6.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-tags="feeding">
         <img src="../../images/cat/persian eating.jpg" alt="A Persian Eating A Cat Food" />
         <h4>What To Feed A Persian Cat</h4>
         <p>Persians aren’t the most active cats, and care must be taken to prevent them from carrying excess weight.</p>
         <a href="../../articles-page/cat/article7.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-tags="training">
         <img src="../../images/cat/persian train.jpg" alt="Training Persian" />
         <h4>Behavior And Training Tips For Persian Cats</h4>
         <p>Shuter and Quandt describe Persian cats as habitual creatures who prefer a calm and quiet lifestyle. </p>
         <a href="../../articles-page/cat/article8.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-tags="grooming">
         <img src="../../images/cat/persian grooming.jpg" alt="Grooming Persian" />
         <h4>Persian Grooming Guide</h4>
         <p>According to Quandt and Shuter, Persians are “high-maintenance cats” with thick, long coats and flat facial features that require some extra special care. .</p>
@@ -115,11 +132,11 @@
       </article>
     </div>
 
-    <!-- Siamese-->>
+    <!-- Siamese-->
     <h2 class="section-title">Siamese</h2>
     <p class="section-description">Read different articles related to Siamese.</p>
     <div class="container articles__grid">
-      <article class="card">
+      <article class="card" data-tags="health">
         <img src="../../images/cat/siamese health.jpg"
         alt="Siamese Getting Check Up" />
         <h4>Siamese Health Issues</h4>
@@ -127,21 +144,21 @@
         <a href="../../articles-page/cat/article10.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-tags="feeding">
         <img src="../../images/cat/siamese eating.jpg" alt="A Siamese Eating A Cat Food" />
         <h4>What To Feed A Siamese</h4>
         <p>A high-quality commercial diet approved by the Association of American Feed Control Officials (AAFCO) will provide your Siamese cat with all the essential nutrients and vitamins for their life stage.</p>
         <a href="../../articles-page/cat/article11.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-tags="training">
         <img src="../../images/cat/siamese train.jpg" alt="Training Siamese" />
         <h4>Behavior And Training Tips For Siamese Cats</h4>
         <p>Siamese cats have a reputation for being spunky and talkative. But of course, every cat is different, says Louviere.</p>
         <a href="../../articles-page/cat/article12.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-tags="grooming">
         <img src="../../images/cat/siamese grooming.jpg" alt="Grooming Siamese" />
         <h4>Siamese Grooming Guide</h4>
         <p>Despite their royal origins, Siamese cats don’t require any royal treatment for their skin, coat, or eyes when it comes to routine care.</p>
@@ -149,11 +166,11 @@
       </article>
     </div>
 
-    <!-- Sphynx-->>
+    <!-- Sphynx-->
     <h2 class="section-title">Sphynx</h2>
     <p class="section-description">Read different articles related to Sphynx.</p>
     <div class="container articles__grid">
-      <article class="card">
+      <article class="card" data-tags="health">
         <img src="../../images/cat/sphynx health.jpg"
         alt="Sphynx Getting Check Up" />
         <h4>Sphynx Health Issues</h4>
@@ -161,21 +178,21 @@
         <a href="../../articles-page/cat/article14.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-tags="feeding">
         <img src="../../images/cat/sphynx eating.jpg" alt="A Sphynx Eating A Cat Food" />
         <h4>What To Feed A Sphynx</h4>
         <p>To prevent you cat from becoming bored, incorporate food puzzles, lick mats, and foraging into your cat’s mealtime.</p>
         <a href="../../articles-page/cat/article15.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-tags="training">
         <img src="../../images/cat/sphynx train.jpg" alt="Training Sphynx" />
         <h4>Behavior And Training Tips For Sphynx Cats</h4>
         <p>The inquisitive Sphynx is high-energy and attention-seeking. </p>
         <a href="../../articles-page/cat/article16.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-tags="grooming">
         <img src="../../images/cat/sphynx grooming.jpg" alt="Grooming Sphynx" />
         <h4>Sphynx Grooming Guide</h4>
         <p>While they don’t need to be brushed, Sphynx cats shouldn’t be considered low-maintenance kitties. These cats require a lot of upkeep.</p>
@@ -203,7 +220,49 @@
         document.querySelector(".main-nav").classList.toggle("active");
       });
 
-      document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    // Scroll Progress Indicator
+    const scrollProgress = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      scrollProgress.style.width = scrollPercent + '%';
+    });
+
+    // Category Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const filter = btn.dataset.filter;
+        
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.tags === filter) {
+            card.style.display = 'grid';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
   </script>
   </body>
 </html>

@@ -26,9 +26,16 @@
         <a href="../../pets-page/hamster page/index.html" class="nav-link">Hamster</a>
         <a href="#" class="nav-link">Bird</a>
         <a href="../../pets-page/fish page/index.html" class="nav-link">Fish</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <span class="moon-icon">🌙</span>
+          <span class="sun-icon">☀️</span>
+        </button>
       </nav>
     </div>
   </header>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -47,9 +54,19 @@
   <section id="articles" class="featured-articles">
     <h2 class="section-title">Articles</h2>
     <p class="section-description">Read different articles related to Birds.</p>
+    
+    <!-- Category Filter -->
+    <div class="category-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="feeding">Feeding</button>
+      <button class="filter-btn" data-filter="grooming">Grooming</button>
+      <button class="filter-btn" data-filter="health">Health</button>
+      <button class="filter-btn" data-filter="training">Training</button>
+    </div>
+
     <div class="container articles__grid">
-      <article class="card">
-        <img src="../../images/bird/article 1.avif" alt="A Bird Eating at the Camera" />
+      <article class="card" data-tags="feeding">
+        <img src="../../images/bird/article 1.avif" alt="A Bird Eating at the Camera" loading="lazy" />
         <h4>How To Feed A Bird Properly</h4>
         <p>
           Many people would complete a discussion on how to feed a bird with just one word: seeds. Perhaps some would
@@ -58,8 +75,8 @@
         <a href="../../articles-page/bird/article1.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/bird/article 2.avif" alt="A Bird in the finger" />
+      <article class="card" data-tags="training">
+        <img src="../../images/bird/article 2.avif" alt="A Bird in the finger" loading="lazy" />
         <h4>How To Train A Bird</h4>
         <p>
           If you're looking to adopt your first bird, you may be wondering what to know when it comes to training your
@@ -69,8 +86,8 @@
         <a href="../../articles-page/bird/article2.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/bird/article 3.webp" alt="A Bird looking at a veterinarian while triming it's nail" />
+      <article class="card" data-tags="grooming">
+        <img src="../../images/bird/article 3.webp" alt="A Bird looking at a veterinarian while triming it's nail" loading="lazy" />
         <h4>Grooming And Routine Care Of Pet Birds</h4>
         <p>
           Like all pets, birds need regular care and grooming. Here are a few grooming tips:
@@ -78,8 +95,8 @@
         <a href="../../articles-page/bird/article3.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/bird/article 4.jpg" alt="A Bird on palm of a kid." />
+      <article class="card" data-tags="health">
+        <img src="../../images/bird/article 4.jpg" alt="A Bird on palm of a kid." loading="lazy" />
         <h4>Bird Health Care</h4>
         <p>
           Having a bird as part of your family can be a considerable responsibility, as they are entirely dependent on
@@ -90,8 +107,8 @@
         <a href="../../articles-page/bird/article4.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/bird/article 5.avif" alt="A child caring a bird." />
+      <article class="card" data-tags="health">
+        <img src="../../images/bird/article 5.avif" alt="A child caring a bird." loading="lazy" />
         <h4>7 Best Pet Bird Species</h4>
         <p>
           There are so many species to choose from - how do you know what is best for your family? Read on to learn a
@@ -100,8 +117,8 @@
         <a href="../../articles-page/bird/article5.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/bird/article 6.avif" alt="A Bird standing on a wood stand." />
+      <article class="card" data-tags="training">
+        <img src="../../images/bird/article 6.avif" alt="A Bird standing on a wood stand." loading="lazy" />
         <h4>Where To Pet Your Bird</h4>
         <p>
           Most people know where to pet a dog or a cat, but what about a pet bird? It's a bit more complicated.
@@ -129,6 +146,48 @@
       });
 
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    // Scroll Progress Indicator
+    const scrollProgress = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      scrollProgress.style.width = scrollPercent + '%';
+    });
+
+    // Category Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const filter = btn.dataset.filter;
+        
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.tags === filter) {
+            card.style.display = 'grid';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
   </script>
 </body>
 

@@ -24,9 +24,16 @@
         <a href="../hamster page/index.html" class="nav-link">Hamster</a>
         <a href="../bird page/index.html" class="nav-link">Bird</a>
         <a href="../fish page/index.html" class="nav-link">Fish</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <span class="moon-icon">🌙</span>
+          <span class="sun-icon">☀️</span>
+        </button>
       </nav>
     </div>
   </header>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -46,37 +53,47 @@
   <section id="articles" class="featured-articles">
     <h2 class="section-title">Articles</h2>
     <p class="section-description">Read different articles related to Dogs.</p>
+    
+    <!-- Category Filter -->
+    <div class="category-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="feeding">Feeding</button>
+      <button class="filter-btn" data-filter="grooming">Grooming</button>
+      <button class="filter-btn" data-filter="health">Health</button>
+      <button class="filter-btn" data-filter="training">Training</button>
+    </div>
+
     <div class="container articles__grid">
-      <article class="card">
-        <img src="../../images/dog/food.PNG" alt="A Dog looking at the Dog Food" />
+      <article class="card" data-tags="feeding">
+        <img src="../../images/dog/food.PNG" alt="A Dog looking at the Dog Food" loading="lazy" />
         <h4>How Much To Feed Your Dog</h4>
         <p>Feeding the right amount of a high-quality dog food is one of the simplest things you can do to help keep your dog healthy.</p>
         <a href="../../articles-page/dog/article1.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/dog/stubborn.PNG" alt="A Dog barking at the camera" />
+      <article class="card" data-tags="training">
+        <img src="../../images/dog/stubborn.PNG" alt="A Dog barking at the camera" loading="lazy" />
         <h4>Signs That Your Dog Is Stubborn And Disobedient</h4>
         <p>Dogs are often called loyal companions, and they have earned this reputation for good reason.</p>
         <a href="../../articles-page/dog/article2.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/dog/groom.PNG" alt="A Dog smiling while being groomed" />
+      <article class="card" data-tags="grooming">
+        <img src="../../images/dog/groom.PNG" alt="A Dog smiling while being groomed" loading="lazy" />
         <h4>How Professional Grooming Protects Your Dog's Well-being</h4>
         <p>When most dog owners think about professional grooming, they picture a freshly bathed pup with a stylish trim.</p>
         <a href="../../articles-page/dog/article3.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/dog/pain.PNG" alt="A Dog feeling pain and a veterinarian petting the dog" />
+      <article class="card" data-tags="health">
+        <img src="../../images/dog/pain.PNG" alt="A Dog feeling pain and a veterinarian petting the dog" loading="lazy" />
         <h4>Common Changes In Dog Behavior That Might Signal Pain</h4>
         <p>Dogs are skilled at masking discomfort, often showing only subtle shifts in behavior that can easily be overlooked.</p>
         <a href="../../articles-page/dog/article4.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/dog/coconut.PNG" alt="A Dog sitting in a chair with coconut on the table at the beach" />
+      <article class="card" data-tags="feeding">
+        <img src="../../images/dog/coconut.PNG" alt="A Dog sitting in a chair with coconut on the table at the beach" loading="lazy" />
         <h4>Can My Dog Drink Coconut Water? Benefits & Considerations</h4>
         <p>Yes, dogs can drink coconut water. However, there are some cases where your dog should avoid drinking coconut water.</p>
         <a href="../../articles-page/dog/article5.html" class="btn-read-article">Read Article</a>
@@ -87,29 +104,29 @@
     <h2 class="section-title">Chihuahua</h2>
     <p class="section-description">Read different articles related to Chihuahua.</p>
     <div class="container articles__grid">
-      <article class="card">
-        <img src="../../images/dog/chihuahua-sitting.avif" alt="A Dog looking at the Dog Food" />
+      <article class="card" data-tags="health">
+        <img src="../../images/dog/chihuahua-sitting.avif" alt="Chihuahua sitting" loading="lazy" />
         <h4>Chihuahua Health Issues</h4>
         <p>The average Chihuahua lifespan is 14-16 years; they're actually one of the longest-living dog breeds.</p>
         <a href="../../articles-page/dog/article6.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/dog/chihuahua-feeding-guide-section-4.webp" alt="A Dog looking at the Dog Food" />
+      <article class="card" data-tags="feeding">
+        <img src="../../images/dog/chihuahua-feeding-guide-section-4.webp" alt="Chihuahua eating food" loading="lazy" />
         <h4>What To Feed a Chihuahua</h4>
         <p>Chihuahuas are prone to obesity, so it's important to feed them a well-balanced diet and to exercise them daily.</p>
         <a href="../../articles-page/dog/article7.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/dog/chihuahua-walking.avif" alt="A Dog looking at the Dog Food" />
+      <article class="card" data-tags="training">
+        <img src="../../images/dog/chihuahua-walking.avif" alt="Chihuahua walking" loading="lazy" />
         <h4>Behavior And Training Tips For Chihuahuas</h4>
         <p>Chihuahuas can be a dedicated lap dog, a sassy ball of energy, or both. In fact, the official breed standard describes Chis as having a “saucy expression.”</p>
         <a href="../../articles-page/dog/article8.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/dog/chihuahua-grooming-long-haired-tools-table-53187.webp" alt="A Dog looking at the Dog Food" />
+      <article class="card" data-tags="grooming">
+        <img src="../../images/dog/chihuahua-grooming-long-haired-tools-table-53187.webp" alt="Chihuahua being groomed" loading="lazy" />
         <h4>Chihuahua Grooming Guide</h4>
         <p>Grooming isn't much of a hassle with Chihuahuas. But note that it's easy for Chihuahuas to get cold—again, they are so small.</p>
         <a href="../../articles-page/dog/article9.html" class="btn-read-article">Read Article</a>
@@ -120,29 +137,29 @@
     <h2 class="section-title">Golden Retriever</h2>
     <p class="section-description">Read different articles related to Golden Retriever.</p>
     <div class="container articles__grid">
-      <article class="card">
-        <img src="../../images/dog/golden-retriever-3.avif" alt="A Dog looking at the Dog Food" />
+      <article class="card" data-tags="health">
+        <img src="../../images/dog/golden-retriever-3.avif" alt="Golden Retriever" loading="lazy" />
         <h4>Golden Retriever Health Issues</h4>
         <p>The average Golden Retriever lifespan is 10-12 years, and they're typically healthy dogs.</p>
         <a href="../../articles-page/dog/article10.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/dog/golden-retriever-2.avif" alt="A Dog looking at the Dog Food" />
+      <article class="card" data-tags="feeding">
+        <img src="../../images/dog/golden-retriever-2.avif" alt="Golden Retriever eating" loading="lazy" />
         <h4>What To Feed A Golden Retriever</h4>
         <p>Golden Retriever puppies should be fed a large-breed, high-quality puppy formula until they are 12-18 months old, depending on your veterinarian's recommendation.</p>
         <a href="../../articles-page/dog/article11.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/dog/golden-retriever-puppy.avif" alt="A Dog looking at the Dog Food" />
+      <article class="card" data-tags="training">
+        <img src="../../images/dog/golden-retriever-puppy.avif" alt="Golden Retriever puppy" loading="lazy" />
         <h4>Behavior And Training Tips For Golden Retrievers</h4>
         <p>Golden Retrievers generally have a sweet-natured temperament; they are often friendly dogs that get along with children, other pets, and even strangers.</p>
         <a href="../../articles-page/dog/article12.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/dog/golden-retriever-grooming_sonsart-Shutterstock.webp" alt="A Dog looking at the Dog Food" />
+      <article class="card" data-tags="grooming">
+        <img src="../../images/dog/golden-retriever-grooming_sonsart-Shutterstock.webp" alt="Golden Retriever being groomed" loading="lazy" />
         <h4>Golden Retriever Grooming Guide</h4>
         <p>Grooming a Golden Retriever is an important part of their care, as these dogs have thick coats and sensitive skin.</p>
         <a href="../../articles-page/dog/article13.html" class="btn-read-article">Read Article</a>
@@ -153,29 +170,29 @@
     <h2 class="section-title">Shih Tzu</h2>
     <p class="section-description">Read different articles related to Shih Tzu.</p>
     <div class="container articles__grid">
-      <article class="card">
-        <img src="../../images/dog/shih-tzu-5.avif" alt="A Dog looking at the Dog Food" />
+      <article class="card" data-tags="health">
+        <img src="../../images/dog/shih-tzu-5.avif" alt="Shih Tzu" loading="lazy" />
         <h4>Shih Tzu Health Issues</h4>
         <p>The average Shih Tzu lifespan is long, at 10-18 years. They are considered a healthy breed overall, though they can be prone to certain medical conditions.</p>
         <a href="../../articles-page/dog/article14.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/dog/owner-feeding-the-shih-tzu-dog_chaossart_Shutterstock.webp" alt="A Dog looking at the Dog Food" />
+      <article class="card" data-tags="feeding">
+        <img src="../../images/dog/owner-feeding-the-shih-tzu-dog_chaossart_Shutterstock.webp" alt="Shih Tzu eating" loading="lazy" />
         <h4>What To Feed A Shih Tzu</h4>
         <p>Shih Tzu are prone to obesity, so it's important to feed them a well-balanced diet and to avoid too many treats throughout the day.</p>
         <a href="../../articles-page/dog/article15.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/dog/shih-tzu-4.avif" alt="A Dog looking at the Dog Food" />
+      <article class="card" data-tags="training">
+        <img src="../../images/dog/shih-tzu-4.avif" alt="Shih Tzu training" loading="lazy" />
         <h4>Training And Behavior Tips For Shih Tzu Dogs</h4>
         <p>Shih Tzu love to be spoiled with attention and treats; they love to please their pet parents and are usually quick to learn new tricks to get the reward and praise they crave.</p>
         <a href="../../articles-page/dog/article16.html" class="btn-read-article">Read Article</a>
       </article>
 
-      <article class="card">
-        <img src="../../images/dog/shih-tzu-grooming.avif" alt="A Dog looking at the Dog Food" />
+      <article class="card" data-tags="grooming">
+        <img src="../../images/dog/shih-tzu-grooming.avif" alt="Shih Tzu being groomed" loading="lazy" />
         <h4>Shih Tzu Grooming Guide</h4>
         <p>Shih Tzu are minimal shedders, but don't confuse that with having minimal grooming needs.</p>
         <a href="../../articles-page/dog/article17.html" class="btn-read-article">Read Article</a>
@@ -202,6 +219,48 @@
     });
 
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    // Scroll Progress Indicator
+    const scrollProgress = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      scrollProgress.style.width = scrollPercent + '%';
+    });
+
+    // Category Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const filter = btn.dataset.filter;
+        
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.tags === filter) {
+            card.style.display = 'grid';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
   </script>
   </body>
 </html>

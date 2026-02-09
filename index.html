@@ -28,9 +28,38 @@
         <a href="#hamster" class="nav-link">Hamster</a>
         <a href="#bird" class="nav-link">Bird</a>
         <a href="#fish" class="nav-link">Fish</a>
+        <div class="nav-actions">
+          <button class="search-toggle" aria-label="Search" id="searchToggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <span class="moon-icon">🌙</span>
+            <span class="sun-icon">☀️</span>
+          </button>
+        </div>
       </nav>
     </div>
   </header>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-modal">
+      <div class="search-input-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search articles..." autocomplete="off">
+        <button class="search-close" id="searchClose">ESC</button>
+      </div>
+      <div class="search-results" id="searchResults">
+        <div class="search-hint">Start typing to search for pet care articles...</div>
+      </div>
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -48,78 +77,77 @@
     <h2 class="section-title">Featured Articles</h2>
     <div class="container featured-articles__grid">
       <article class="card">
-        <img src="./images/dog/stubborn.PNG" />
+        <img src="./images/dog/stubborn.PNG" alt="Stubborn dog barking" loading="lazy" />
         <h4>Signs That Your Dog Is Stubborn And Disobedient</h4>
         <p>Dogs are often called loyal companions, and they have earned this reputation for good reason.</p>
         <a href="./articles-page/dog/article2.html" class="btn-read-article">Read Article</a>
       </article>
 
       <article class="card">
-        <img src="./images/cat/additional.jpg" />
+        <img src="./images/cat/additional.jpg" alt="Happy cat relaxing" loading="lazy" />
         <h4>12 Telltale Signs Your Cat Is Happy</h4>
         <p>Wondering if you’ve got a happy cat? If your kitty is exhibiting these purr-fectly content behaviors, the answer is yes!</p>
         <a href="./articles-page/cat/article5.html" class="btn-read-article">Read Article</a>
       </article>
 
       <article class="card">
-        <img src="./images/hamster/grooming.jfif" />
+        <img src="./images/hamster/grooming.jfif" alt="Hamster being groomed" loading="lazy" />
         <h4>How To Trim Hamster Nails</h4>
         <p>If your hamster's nails are overgrown so that they are folding inwards or curling sideways, they likely need to be trimmed.</p>
         <a href="./articles-page/hamster/article3.html" class="btn-read-article">Read Article</a>
       </article>
 
       <article class="card">
-        <img src="./images/bird/article 5.avif" />
+        <img src="./images/bird/article 5.avif" alt="Colorful pet bird species" loading="lazy" />
         <h4>7 Best Pet Bird Species</h4>
         <p>There are so many species to choose from – how do you know what is best for your family? Read on to learn a little bit about these feathered friends, and what you need to know before adopting one.</p>
         <a href="./articles-page/bird/article5.html" class="btn-read-article">Read Article</a>
       </article>
 
       <article class="card">
-        <img src="./images/fish/article2.jpg" />
+        <img src="./images/fish/article2.jpg" alt="Fish doing tricks in aquarium" loading="lazy" />
         <h4>How To Train Your Fish To Do Tricks</h4>
         <p>Fish training is a fun, interesting activity to enrich the life of your pet fish.</p>
         <a href="./articles-page/fish/article2.html" class="btn-read-article">Read Article</a>
       </article>
 
       <article class="card">
-        <img src="./images/dog/chihuahua-feeding-guide-section-4.webp" />
+        <img src="./images/dog/chihuahua-feeding-guide-section-4.webp" alt="Chihuahua eating food" loading="lazy" />
         <h4>What To Feed a Chihuahua</h4>
         <p>Chihuahuas are prone to obesity, so it's important to feed them a well-balanced diet and to exercise them daily.</p>
         <a href="./articles-page/dog/article7.html" class="btn-read-article">Read Article</a>
       </article>
 
       <article class="card">
-        <img src="./images/dog/golden-retriever-puppy.avif" alt="A Dog looking at the Dog Food" />
+        <img src="./images/dog/golden-retriever-puppy.avif" alt="Golden Retriever puppy" loading="lazy" />
         <h4>Behavior And Training Tips For Golden Retrievers</h4>
         <p>Golden Retrievers generally have a sweet-natured temperament; they are often friendly dogs that get along with children, other pets, and even strangers.</p>
         <a href="./articles-page/dog/article12.html" class="btn-read-article">Read Article</a>
       </article>
 
       <article class="card">
-        <img src="./images/dog/shih-tzu-grooming.avif" />
+        <img src="./images/dog/shih-tzu-grooming.avif" alt="Shih Tzu being groomed" loading="lazy" />
         <h4>Shih Tzu Grooming Guide</h4>
         <p>Shih Tzu are minimal shedders, but don't confuse that with having minimal grooming needs.</p>
         <a href="./articles-page/dog/article17.html" class="btn-read-article">Read Article</a>
       </article>
 
       <article class="card">
-        <img src="./images/cat/siamese health.jpg"
-        alt="Siamese Getting Check Up" />
+        <img src="./images/cat/siamese health.jpg" alt="Siamese cat at vet checkup" loading="lazy" />
         <h4>Siamese Health Issues</h4>
         <p>Siamese cats have an impressive lifespan, averaging 15 years but known to live well into their 20s. Because they’re prone to some health conditions, it’s a good idea to consider purchasing pet insurance for your Siamese kitten.</p>
         <a href="./articles-page/cat/article10.html" class="btn-read-article">Read Article</a>
       </article>
 
       <article class="card">
-        <img src="./images/cat/persian grooming.jpg" alt="Grooming Persian" />
+        <img src="./images/cat/persian grooming.jpg" alt="Persian cat being groomed" loading="lazy" />
         <h4>Persian Grooming Guide</h4>
         <p>According to Quandt and Shuter, Persians are “high-maintenance cats” with thick, long coats and flat facial features that require some extra special care. .</p>
         <a href="./articles-page/cat/article9.html" class="btn-read-article">Read Article</a>
       </article>
 
       <article class="card">
-        <img src="./images/cat/sphynx train.jpg" alt="Training Sphynx" />
+        <img src="./images/cat/sphynx train.jpg" alt="Sphynx cat training" loading="lazy" />
         <h4>Behavior and Training Tips for Sphynx Cats</h4>
         <p>The inquisitive Sphynx is high-energy and attention-seeking. </p>
         <a href="./articles-page/cat/article16.html" class="btn-read-article">Read Article</a>
@@ -235,6 +263,54 @@
     </div>
   </footer>
 
+  <!-- AI Chatbot -->
+  <div id="chatbot-container" class="chatbot-container">
+    <button id="chatbot-toggle" class="chatbot-toggle" aria-label="Open chat assistant">
+      <svg class="chat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+        <circle cx="8" cy="10" r="1.5"/>
+        <circle cx="12" cy="10" r="1.5"/>
+        <circle cx="16" cy="10" r="1.5"/>
+      </svg>
+      <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+      </svg>
+    </button>
+    
+    <div id="chatbot-window" class="chatbot-window">
+      <div class="chatbot-header">
+        <div class="chatbot-header-info">
+          <div class="chatbot-avatar">🐾</div>
+          <div>
+            <h3>Carepet Assistant</h3>
+            <span class="chatbot-status">Online</span>
+          </div>
+        </div>
+        <button id="chatbot-close" class="chatbot-close" aria-label="Close chat">×</button>
+      </div>
+      
+      <div id="chatbot-messages" class="chatbot-messages">
+        <div class="chat-message bot-message">
+          <div class="message-content">
+            Hello! 👋 I'm your Carepet Assistant. I can help you with questions about pet care for dogs, cats, hamsters, birds, and fish. How can I assist you today?
+          </div>
+        </div>
+      </div>
+      
+      <div class="chatbot-input-container">
+        <input type="text" id="chatbot-input" class="chatbot-input" placeholder="Type your question..." autocomplete="off">
+        <button id="chatbot-send" class="chatbot-send" aria-label="Send message">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <script>
     // Mobile menu toggle
     const menuBtn = document.querySelector('.mobile-menu-btn');
@@ -245,6 +321,399 @@
     });
 
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    // Search Functionality
+    const searchToggle = document.getElementById('searchToggle');
+    const searchOverlay = document.getElementById('searchOverlay');
+    const searchInput = document.getElementById('searchInput');
+    const searchClose = document.getElementById('searchClose');
+    const searchResults = document.getElementById('searchResults');
+
+    const searchArticles = [
+      { title: "How Much To Feed Your Dog", url: "./articles-page/dog/article1.html", pet: "dog", icon: "🐕" },
+      { title: "Signs That Your Dog Is Stubborn And Disobedient", url: "./articles-page/dog/article2.html", pet: "dog", icon: "🐕" },
+      { title: "How Professional Grooming Protects Your Dog's Well-being", url: "./articles-page/dog/article3.html", pet: "dog", icon: "🐕" },
+      { title: "Common Changes In Dog Behavior That Might Signal Pain", url: "./articles-page/dog/article4.html", pet: "dog", icon: "🐕" },
+      { title: "Can My Dog Drink Coconut Water?", url: "./articles-page/dog/article5.html", pet: "dog", icon: "🐕" },
+      { title: "Chihuahua Health Issues", url: "./articles-page/dog/article6.html", pet: "dog", icon: "🐕" },
+      { title: "What To Feed a Chihuahua", url: "./articles-page/dog/article7.html", pet: "dog", icon: "🐕" },
+      { title: "Behavior And Training Tips For Chihuahuas", url: "./articles-page/dog/article8.html", pet: "dog", icon: "🐕" },
+      { title: "Chihuahua Grooming Guide", url: "./articles-page/dog/article9.html", pet: "dog", icon: "🐕" },
+      { title: "Golden Retriever Health Issues", url: "./articles-page/dog/article10.html", pet: "dog", icon: "🐕" },
+      { title: "What To Feed A Golden Retriever", url: "./articles-page/dog/article11.html", pet: "dog", icon: "🐕" },
+      { title: "Behavior And Training Tips For Golden Retrievers", url: "./articles-page/dog/article12.html", pet: "dog", icon: "🐕" },
+      { title: "Golden Retriever Grooming Guide", url: "./articles-page/dog/article13.html", pet: "dog", icon: "🐕" },
+      { title: "Shih Tzu Health Issues", url: "./articles-page/dog/article14.html", pet: "dog", icon: "🐕" },
+      { title: "What To Feed A Shih Tzu", url: "./articles-page/dog/article15.html", pet: "dog", icon: "🐕" },
+      { title: "Training And Behavior Tips For Shih Tzu Dogs", url: "./articles-page/dog/article16.html", pet: "dog", icon: "🐕" },
+      { title: "Shih Tzu Grooming Guide", url: "./articles-page/dog/article17.html", pet: "dog", icon: "🐕" },
+      { title: "Cat Nutrition: What Makes A Nutritional Cat Food?", url: "./articles-page/cat/article1.html", pet: "cat", icon: "🐱" },
+      { title: "Grooming And Coat Care For Your Cat", url: "./articles-page/cat/article2.html", pet: "cat", icon: "🐱" },
+      { title: "How To Stop Your Cat From Biting", url: "./articles-page/cat/article3.html", pet: "cat", icon: "🐱" },
+      { title: "Complete Cat Health Guide For Every Life Stage", url: "./articles-page/cat/article4.html", pet: "cat", icon: "🐱" },
+      { title: "12 Telltale Signs Your Cat Is Happy", url: "./articles-page/cat/article5.html", pet: "cat", icon: "🐱" },
+      { title: "Persian Cat Health Issues", url: "./articles-page/cat/article6.html", pet: "cat", icon: "🐱" },
+      { title: "What To Feed A Persian Cat", url: "./articles-page/cat/article7.html", pet: "cat", icon: "🐱" },
+      { title: "Behavior And Training Tips For Persian Cats", url: "./articles-page/cat/article8.html", pet: "cat", icon: "🐱" },
+      { title: "Persian Grooming Guide", url: "./articles-page/cat/article9.html", pet: "cat", icon: "🐱" },
+      { title: "Siamese Health Issues", url: "./articles-page/cat/article10.html", pet: "cat", icon: "🐱" },
+      { title: "What To Feed A Siamese", url: "./articles-page/cat/article11.html", pet: "cat", icon: "🐱" },
+      { title: "Behavior And Training Tips For Siamese Cats", url: "./articles-page/cat/article12.html", pet: "cat", icon: "🐱" },
+      { title: "Siamese Grooming Guide", url: "./articles-page/cat/article13.html", pet: "cat", icon: "🐱" },
+      { title: "Sphynx Health Issues", url: "./articles-page/cat/article14.html", pet: "cat", icon: "🐱" },
+      { title: "What To Feed A Sphynx", url: "./articles-page/cat/article15.html", pet: "cat", icon: "🐱" },
+      { title: "Behavior And Training Tips For Sphynx Cats", url: "./articles-page/cat/article16.html", pet: "cat", icon: "🐱" },
+      { title: "Sphynx Grooming Guide", url: "./articles-page/cat/article17.html", pet: "cat", icon: "🐱" },
+      { title: "How to Feed Hamsters", url: "./articles-page/hamster/article1.html", pet: "hamster", icon: "🐹" },
+      { title: "How to Exercise a Hamster", url: "./articles-page/hamster/article2.html", pet: "hamster", icon: "🐹" },
+      { title: "How to Trim Hamster Nails", url: "./articles-page/hamster/article3.html", pet: "hamster", icon: "🐹" },
+      { title: "How to Treat Your Sick Hamster", url: "./articles-page/hamster/article4.html", pet: "hamster", icon: "🐹" },
+      { title: "How To Feed A Bird Properly", url: "./articles-page/bird/article1.html", pet: "bird", icon: "🐦" },
+      { title: "How To Train a Bird", url: "./articles-page/bird/article2.html", pet: "bird", icon: "🐦" },
+      { title: "Grooming and Routine Care of Pet Birds", url: "./articles-page/bird/article3.html", pet: "bird", icon: "🐦" },
+      { title: "Bird Health Care", url: "./articles-page/bird/article4.html", pet: "bird", icon: "🐦" },
+      { title: "7 Best Pet Bird Species", url: "./articles-page/bird/article5.html", pet: "bird", icon: "🐦" },
+      { title: "Where To Pet Your Bird", url: "./articles-page/bird/article6.html", pet: "bird", icon: "🐦" },
+      { title: "What Do Fish Eat? Your Guide To Feeding Pet Fish", url: "./articles-page/fish/article1.html", pet: "fish", icon: "🐟" },
+      { title: "How To Train Your Fish To Do Tricks", url: "./articles-page/fish/article2.html", pet: "fish", icon: "🐟" },
+      { title: "How To Clean A Fish Tank", url: "./articles-page/fish/article3.html", pet: "fish", icon: "🐟" },
+      { title: "How To Care For Fish: A Complete Guide", url: "./articles-page/fish/article4.html", pet: "fish", icon: "🐟" }
+    ];
+
+    searchToggle.addEventListener('click', () => {
+      searchOverlay.classList.add('active');
+      searchInput.focus();
+    });
+
+    searchClose.addEventListener('click', () => searchOverlay.classList.remove('active'));
+    searchOverlay.addEventListener('click', (e) => {
+      if (e.target === searchOverlay) searchOverlay.classList.remove('active');
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') searchOverlay.classList.remove('active');
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        searchOverlay.classList.add('active');
+        searchInput.focus();
+      }
+    });
+
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      if (!query) {
+        searchResults.innerHTML = '<div class="search-hint">Start typing to search for pet care articles...</div>';
+        return;
+      }
+      const matches = searchArticles.filter(a => a.title.toLowerCase().includes(query) || a.pet.includes(query));
+      if (matches.length === 0) {
+        searchResults.innerHTML = '<div class="search-no-results">No articles found. Try a different search term.</div>';
+        return;
+      }
+      searchResults.innerHTML = matches.slice(0, 8).map(a => `
+        <a href="${a.url}" class="search-result-item">
+          <span class="search-result-icon">${a.icon}</span>
+          <div class="search-result-info">
+            <h4>${a.title}</h4>
+            <p>${a.pet.charAt(0).toUpperCase() + a.pet.slice(1)} Care</p>
+          </div>
+        </a>
+      `).join('');
+    });
+
+    // Scroll Progress Indicator
+    const scrollProgress = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      scrollProgress.style.width = scrollPercent + '%';
+    });
+
+    // Chatbot functionality
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatbotWindow = document.getElementById('chatbot-window');
+    const chatbotClose = document.getElementById('chatbot-close');
+    const chatbotInput = document.getElementById('chatbot-input');
+    const chatbotSend = document.getElementById('chatbot-send');
+    const chatbotMessages = document.getElementById('chatbot-messages');
+    const chatbotContainer = document.getElementById('chatbot-container');
+
+    // Website articles database
+    const articles = {
+      dog: [
+        { title: "How Much To Feed Your Dog", url: "./articles-page/dog/article1.html", keywords: ["feed", "feeding", "food", "diet", "nutrition", "eat", "portion"] },
+        { title: "Signs That Your Dog Is Stubborn And Disobedient", url: "./articles-page/dog/article2.html", keywords: ["stubborn", "disobedient", "behavior", "training", "obey"] },
+        { title: "How Professional Grooming Protects Your Dog's Well-being", url: "./articles-page/dog/article3.html", keywords: ["groom", "grooming", "professional", "well-being", "care"] },
+        { title: "Common Changes In Dog Behavior That Might Signal Pain", url: "./articles-page/dog/article4.html", keywords: ["pain", "behavior", "sick", "health", "signal", "change"] },
+        { title: "Can My Dog Drink Coconut Water? Benefits & Considerations", url: "./articles-page/dog/article5.html", keywords: ["coconut", "water", "drink", "benefits"] },
+        { title: "Chihuahua Health Issues", url: "./articles-page/dog/article6.html", keywords: ["chihuahua", "health", "issues", "sick"] },
+        { title: "What To Feed a Chihuahua", url: "./articles-page/dog/article7.html", keywords: ["chihuahua", "feed", "food", "diet", "nutrition"] },
+        { title: "Behavior And Training Tips For Chihuahuas", url: "./articles-page/dog/article8.html", keywords: ["chihuahua", "behavior", "training", "tips", "train"] },
+        { title: "Chihuahua Grooming Guide", url: "./articles-page/dog/article9.html", keywords: ["chihuahua", "groom", "grooming", "guide"] },
+        { title: "Golden Retriever Health Issues", url: "./articles-page/dog/article10.html", keywords: ["golden retriever", "retriever", "health", "issues", "sick"] },
+        { title: "What To Feed A Golden Retriever", url: "./articles-page/dog/article11.html", keywords: ["golden retriever", "retriever", "feed", "food", "diet"] },
+        { title: "Behavior And Training Tips For Golden Retrievers", url: "./articles-page/dog/article12.html", keywords: ["golden retriever", "retriever", "behavior", "training", "train"] },
+        { title: "Golden Retriever Grooming Guide", url: "./articles-page/dog/article13.html", keywords: ["golden retriever", "retriever", "groom", "grooming"] },
+        { title: "Shih Tzu Health Issues", url: "./articles-page/dog/article14.html", keywords: ["shih tzu", "health", "issues", "sick"] },
+        { title: "What To Feed A Shih Tzu", url: "./articles-page/dog/article15.html", keywords: ["shih tzu", "feed", "food", "diet"] },
+        { title: "Training And Behavior Tips For Shih Tzu Dogs", url: "./articles-page/dog/article16.html", keywords: ["shih tzu", "training", "behavior", "train"] },
+        { title: "Shih Tzu Grooming Guide", url: "./articles-page/dog/article17.html", keywords: ["shih tzu", "groom", "grooming"] }
+      ],
+      cat: [
+        { title: "Cat Nutrition: What Makes A Nutritional Cat Food?", url: "./articles-page/cat/article1.html", keywords: ["nutrition", "food", "feed", "diet", "nutritional"] },
+        { title: "Grooming And Coat Care For Your Cat", url: "./articles-page/cat/article2.html", keywords: ["groom", "grooming", "coat", "fur", "brush"] },
+        { title: "How To Stop Your Cat From Biting", url: "./articles-page/cat/article3.html", keywords: ["bite", "biting", "behavior", "stop", "training"] },
+        { title: "Complete Cat Health Guide For Every Life Stage", url: "./articles-page/cat/article4.html", keywords: ["health", "guide", "life stage", "care"] },
+        { title: "12 Telltale Signs Your Cat Is Happy", url: "./articles-page/cat/article5.html", keywords: ["happy", "signs", "behavior", "mood"] },
+        { title: "Persian Cat Health Issues", url: "./articles-page/cat/article6.html", keywords: ["persian", "health", "issues", "sick"] },
+        { title: "What To Feed A Persian Cat", url: "./articles-page/cat/article7.html", keywords: ["persian", "feed", "food", "diet"] },
+        { title: "Behavior And Training Tips For Persian Cats", url: "./articles-page/cat/article8.html", keywords: ["persian", "behavior", "training", "train"] },
+        { title: "Persian Grooming Guide", url: "./articles-page/cat/article9.html", keywords: ["persian", "groom", "grooming"] },
+        { title: "Siamese Health Issues", url: "./articles-page/cat/article10.html", keywords: ["siamese", "health", "issues", "sick"] },
+        { title: "What To Feed A Siamese", url: "./articles-page/cat/article11.html", keywords: ["siamese", "feed", "food", "diet"] },
+        { title: "Behavior And Training Tips For Siamese Cats", url: "./articles-page/cat/article12.html", keywords: ["siamese", "behavior", "training", "train"] },
+        { title: "Siamese Grooming Guide", url: "./articles-page/cat/article13.html", keywords: ["siamese", "groom", "grooming"] },
+        { title: "Sphynx Health Issues", url: "./articles-page/cat/article14.html", keywords: ["sphynx", "health", "issues", "sick"] },
+        { title: "What To Feed A Sphynx", url: "./articles-page/cat/article15.html", keywords: ["sphynx", "feed", "food", "diet"] },
+        { title: "Behavior And Training Tips For Sphynx Cats", url: "./articles-page/cat/article16.html", keywords: ["sphynx", "behavior", "training", "train"] },
+        { title: "Sphynx Grooming Guide", url: "./articles-page/cat/article17.html", keywords: ["sphynx", "groom", "grooming"] }
+      ],
+      hamster: [
+        { title: "How to Feed Hamsters", url: "./articles-page/hamster/article1.html", keywords: ["feed", "feeding", "food", "diet", "nutrition"] },
+        { title: "How to Exercise a Hamster", url: "./articles-page/hamster/article2.html", keywords: ["exercise", "wheel", "activity", "play"] },
+        { title: "How to Trim Hamster Nails", url: "./articles-page/hamster/article3.html", keywords: ["nail", "trim", "groom", "grooming", "cut"] },
+        { title: "How to Treat Your Sick Hamster", url: "./articles-page/hamster/article4.html", keywords: ["sick", "health", "treat", "illness", "vet"] }
+      ],
+      bird: [
+        { title: "How To Feed A Bird Properly", url: "./articles-page/bird/article1.html", keywords: ["feed", "feeding", "food", "diet", "nutrition"] },
+        { title: "How To Train a Bird", url: "./articles-page/bird/article2.html", keywords: ["train", "training", "behavior", "trick"] },
+        { title: "Grooming and Routine Care of Pet Birds", url: "./articles-page/bird/article3.html", keywords: ["groom", "grooming", "care", "routine", "feather"] },
+        { title: "Bird Health Care", url: "./articles-page/bird/article4.html", keywords: ["health", "care", "sick", "vet"] },
+        { title: "7 Best Pet Bird Species", url: "./articles-page/bird/article5.html", keywords: ["species", "best", "pet", "choose", "type"] },
+        { title: "Where To Pet Your Bird", url: "./articles-page/bird/article6.html", keywords: ["pet", "touch", "handle", "bond"] }
+      ],
+      fish: [
+        { title: "What Do Fish Eat? Your Guide To Feeding Pet Fish", url: "./articles-page/fish/article1.html", keywords: ["feed", "feeding", "food", "diet", "eat"] },
+        { title: "How To Train Your Fish To Do Tricks", url: "./articles-page/fish/article2.html", keywords: ["train", "training", "trick", "tricks"] },
+        { title: "How To Clean A Fish Tank", url: "./articles-page/fish/article3.html", keywords: ["clean", "tank", "aquarium", "maintenance", "water"] },
+        { title: "How To Care For Fish: A Complete Guide", url: "./articles-page/fish/article4.html", keywords: ["care", "guide", "complete", "beginner"] }
+      ]
+    };
+
+    // Pet page links
+    const petPages = {
+      dog: "./pets-page/dog page/index.html",
+      cat: "./pets-page/cat page/index.html",
+      hamster: "./pets-page/hamster page/index.html",
+      bird: "./pets-page/bird page/index.html",
+      fish: "./pets-page/fish page/index.html"
+    };
+
+    // Greeting responses
+    const greetings = {
+      keywords: ['hi', 'hello', 'hey', 'greetings', 'good morning', 'good afternoon', 'good evening'],
+      responses: [
+        "Hello! 🐾 How can I help you with your pet care questions today? I can recommend articles about dogs, cats, hamsters, birds, and fish!",
+        "Hi there! I'm here to help you find the right pet care articles. What would you like to know about?",
+        "Hey! Welcome to Carepet. Ask me about feeding, grooming, health, or training for any of our pets!"
+      ]
+    };
+
+    // Thank you responses
+    const thanks = {
+      keywords: ['thank', 'thanks', 'appreciate'],
+      responses: [
+        "You're welcome! 🐾 Feel free to ask if you need more article recommendations!",
+        "Happy to help! Don't hesitate to ask about other pet care topics.",
+        "Anytime! I'm here to help you find the right articles for your pet care needs."
+      ]
+    };
+
+    function findMatchingArticles(message, petType = null) {
+      const lowerMessage = message.toLowerCase();
+      let matchedArticles = [];
+      
+      const petsToSearch = petType ? [petType] : Object.keys(articles);
+      
+      for (const pet of petsToSearch) {
+        for (const article of articles[pet]) {
+          const titleMatch = article.title.toLowerCase().split(' ').some(word =>
+            word.length > 3 && lowerMessage.includes(word.toLowerCase())
+          );
+          const keywordMatch = article.keywords.some(keyword =>
+            lowerMessage.includes(keyword)
+          );
+          
+          if (titleMatch || keywordMatch) {
+            matchedArticles.push({ ...article, pet });
+          }
+        }
+      }
+      
+      return matchedArticles;
+    }
+
+    function detectPetType(message) {
+      const lowerMessage = message.toLowerCase();
+      
+      // Check for specific breeds first
+      if (lowerMessage.includes('chihuahua') || lowerMessage.includes('golden retriever') ||
+          lowerMessage.includes('retriever') || lowerMessage.includes('shih tzu')) {
+        return 'dog';
+      }
+      if (lowerMessage.includes('persian') || lowerMessage.includes('siamese') ||
+          lowerMessage.includes('sphynx')) {
+        return 'cat';
+      }
+      
+      // Check for general pet types
+      if (lowerMessage.includes('dog') || lowerMessage.includes('puppy') || lowerMessage.includes('puppies')) return 'dog';
+      if (lowerMessage.includes('cat') || lowerMessage.includes('kitten') || lowerMessage.includes('kitty')) return 'cat';
+      if (lowerMessage.includes('hamster') || lowerMessage.includes('rodent')) return 'hamster';
+      if (lowerMessage.includes('bird') || lowerMessage.includes('parrot') || lowerMessage.includes('parakeet')) return 'bird';
+      if (lowerMessage.includes('fish') || lowerMessage.includes('aquarium') || lowerMessage.includes('tank')) return 'fish';
+      
+      return null;
+    }
+
+    function formatArticleLink(article) {
+      return `<a href="${article.url}" class="chatbot-article-link" target="_self">📄 ${article.title}</a>`;
+    }
+
+    function generateResponse(userMessage) {
+      const message = userMessage.toLowerCase();
+      
+      // Check for greetings
+      if (greetings.keywords.some(keyword => message.includes(keyword))) {
+        return greetings.responses[Math.floor(Math.random() * greetings.responses.length)];
+      }
+      
+      // Check for thanks
+      if (thanks.keywords.some(keyword => message.includes(keyword))) {
+        return thanks.responses[Math.floor(Math.random() * thanks.responses.length)];
+      }
+      
+      // Detect pet type
+      const petType = detectPetType(message);
+      
+      // Find matching articles
+      const matchedArticles = findMatchingArticles(message, petType);
+      
+      // If we found specific articles
+      if (matchedArticles.length > 0) {
+        const uniqueArticles = matchedArticles.slice(0, 3); // Limit to 3 articles
+        let response = "I found these articles that might help you:<br><br>";
+        response += uniqueArticles.map(formatArticleLink).join('<br>');
+        
+        if (petType && petPages[petType]) {
+          response += `<br><br>You can also browse all our <a href="${petPages[petType]}" class="chatbot-article-link" target="_self">${petType.charAt(0).toUpperCase() + petType.slice(1)} articles</a>.`;
+        }
+        
+        return response;
+      }
+      
+      // If only pet type detected but no specific topic
+      if (petType) {
+        const petArticles = articles[petType].slice(0, 3);
+        let response = `Here are some popular ${petType} care articles:<br><br>`;
+        response += petArticles.map(formatArticleLink).join('<br>');
+        response += `<br><br>Browse all <a href="${petPages[petType]}" class="chatbot-article-link" target="_self">${petType.charAt(0).toUpperCase() + petType.slice(1)} articles</a> for more!`;
+        return response;
+      }
+      
+      // Default response with suggestions
+      return `I can help you find articles about pet care! Try asking about:<br><br>
+        🐕 <strong>Dogs</strong> - feeding, grooming, training, health (Chihuahua, Golden Retriever, Shih Tzu)<br>
+        🐱 <strong>Cats</strong> - nutrition, grooming, behavior (Persian, Siamese, Sphynx)<br>
+        🐹 <strong>Hamsters</strong> - feeding, exercise, nail care, health<br>
+        🐦 <strong>Birds</strong> - feeding, training, grooming, species guide<br>
+        🐟 <strong>Fish</strong> - feeding, tank cleaning, tricks, care guide<br><br>
+        Just ask something like "How do I feed my dog?" or "Siamese cat grooming"!`;
+    }
+
+    function addMessage(content, isUser = false) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `chat-message ${isUser ? 'user-message' : 'bot-message'}`;
+      messageDiv.innerHTML = `<div class="message-content">${content}</div>`;
+      chatbotMessages.appendChild(messageDiv);
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    function showTypingIndicator() {
+      const typingDiv = document.createElement('div');
+      typingDiv.className = 'chat-message bot-message typing-indicator';
+      typingDiv.id = 'typing-indicator';
+      typingDiv.innerHTML = `
+        <div class="message-content">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      `;
+      chatbotMessages.appendChild(typingDiv);
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    function removeTypingIndicator() {
+      const typingIndicator = document.getElementById('typing-indicator');
+      if (typingIndicator) {
+        typingIndicator.remove();
+      }
+    }
+
+    function handleSendMessage() {
+      const message = chatbotInput.value.trim();
+      if (message === '') return;
+      
+      addMessage(message, true);
+      chatbotInput.value = '';
+      
+      // Show typing indicator
+      showTypingIndicator();
+      
+      // Simulate response delay
+      setTimeout(() => {
+        removeTypingIndicator();
+        const response = generateResponse(message);
+        addMessage(response);
+      }, 1000 + Math.random() * 500);
+    }
+
+    // Toggle chatbot window
+    chatbotToggle.addEventListener('click', () => {
+      chatbotContainer.classList.toggle('open');
+      if (chatbotContainer.classList.contains('open')) {
+        chatbotInput.focus();
+      }
+    });
+
+    // Close chatbot
+    chatbotClose.addEventListener('click', () => {
+      chatbotContainer.classList.remove('open');
+    });
+
+    // Send message on button click
+    chatbotSend.addEventListener('click', handleSendMessage);
+
+    // Send message on Enter key
+    chatbotInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        handleSendMessage();
+      }
+    });
   </script>
 </body>
 
