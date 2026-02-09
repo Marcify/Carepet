@@ -123,13 +123,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background: none; */
+    background: none;
     height: 30px;
     width: 30px;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--dark);
+    color: var(--foreground);
     transition: background-color 0.2s, color 0.2s;
 }
 
